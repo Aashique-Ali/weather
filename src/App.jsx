@@ -3,8 +3,7 @@ import sunset from "./assets/sunset.jpg"
 
 function App() {
   const [results, setResults] = useState("")
-  const url =
-    "https://api.openweathermap.org/data/2.5/weather?lat=24.8546842&lon=67.0207055&&units=metric&appid=bd942639e61343682ea4011dc5422335"
+  const url = import.meta.env.VITE_URI
 
   useEffect(() => {
     async function getData() {
@@ -45,11 +44,12 @@ function App() {
             )}
           </div>
           <div>
-            {results.weather.main ? (
+            <h1>haze</h1>
+            {/* {results.weather.main ? (
               <p>{results.weather.main}</p>
             ) : (
               <p>...Loading</p>
-            )}
+            )} */}
           </div>
         </div>
 
